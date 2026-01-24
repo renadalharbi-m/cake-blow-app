@@ -73,7 +73,7 @@ body {{
 </head>
 <body>
 
-<h2>🎂 happy birthday ... .... </h2>
+<h2>🎂 happy birthday Joey 🎂</h2>
 <p>Click on the cake to place candles, then blow into your mic 😘</p>
 <div id="cake"></div>
 <p id="counter">Candles: 0</p>
