@@ -73,7 +73,7 @@ components.html(
     </head>
     <body>
 
-        <h2>🎂 Happy Birthday 🎂</h2>
+        <h2> Happy Birthday Joey  </h2>
         <div id="cake"></div>
         <p>Click on the cake to place candles</p>
         <p>Then blow into your mic 😘</p>
