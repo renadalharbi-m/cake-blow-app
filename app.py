@@ -4,7 +4,7 @@ import base64
 
 st.set_page_config(page_title="Cake Blow 🎂", layout="centered")
 
-#  Base64
+# تحويل الصورة إلى Base64
 with open("cake.png", "rb") as image_file:
     encoded_string = base64.b64encode(image_file.read()).decode()
 
@@ -73,14 +73,12 @@ components.html(
     </head>
     <body>
 
-     <h2>Happy Birthday Joey</h2>
-<div id="cake"></div>
+        <h2>🎂 Happy Birthday 🎂</h2>
+        <div id="cake"></div>
+        <p>Click on the cake to place candles</p>
+        <p>Then blow into your mic 😘</p>
+        <p id="counter">Candles: 0</p>
 
-<div class="cake-text">
-    <p>Click on the cake to place candles</p>
-    <p>Then blow into your mic 😘</p>
-    <p id="counter">Candles: 0</p>
-</div>
         <!-- Confetti library -->
         <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 
