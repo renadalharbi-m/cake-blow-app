@@ -164,10 +164,10 @@ components.html(
         </script>
 
         <!-- Footer -->
-        <p id="footer">Made with ❤️ Renad</p>
+        <p id="footer">made with ❤️ renad </p>
 
     </body>
     </html>
-    """,
+    """
     height=650,
 )
