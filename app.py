@@ -73,10 +73,10 @@ body {{
 </head>
 <body>
 
-<h2>🎂 happy birthday  🎂</h2>
-<p>Click on the cake to place candles, then blow into your mic 😘</p>
+<h2> Happy Birthday Joey </h2>
 <div id="cake"></div>
-<p id="counter">Candles: 0</p>
+<p>Click on the cake to place candles</p>
+<p>Then blow into your mic 😘</p>
 
 <!-- Confetti library -->
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
