@@ -137,8 +137,15 @@ function blowCandles() {{
             origin: {{ y: 0.6 }}
           }});
 
-          document.getElementById("message").innerText =
-            "✨ Wish you a great year 🎉";
+         const msg = document.getElementById("message");
+
+const kisses = ["😘", "💋", "💖", "😘💋", "💋💖💋"];
+let i = 0;
+
+setInterval(() => {
+  msg.innerText = "Have a great year schatje " + kisses[i % kisses.length];
+  i++;
+}, 500);
         }}
       }}, 500);
     }}, index * 100);
