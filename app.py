@@ -148,7 +148,7 @@ function blowCandles() {{
             origin: {{ y: 0.6 }}
           }});
 
-          msg.innerText = "Have a great year schatje 💖 sending kisses from far away 🌍💋";
+          msg.innerText = "Have a great year schatje 💋sending kisses from far away 💋💋💋";
         }}
 
       }}, 500);
@@ -186,7 +186,7 @@ navigator.mediaDevices.getUserMedia({{ audio: true, video: false }})
 }});
 </script>
 
-<p id="footer">Made with ❤️ Renad</p>
+<p id="footer">Made with ❤️ renad</p>
 
 </body>
 </html>
