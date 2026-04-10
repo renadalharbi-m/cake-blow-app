@@ -60,6 +60,18 @@ body {{
   to {{ transform: scale(0.85); }}
 }}
 
+#counter {{
+  font-size: 16px;
+  margin-top: 10px;
+}}
+
+#message {{
+  font-size: 14px;
+  color: #e91e63;
+  font-weight: normal;
+  margin-top: 5px;
+}}
+
 #footer {{
     position: fixed;
     left: 10px;
@@ -72,14 +84,13 @@ body {{
 
 <body>
 
-<h2>🎂 Happy Birthday 🎉</h2>
+<h2> Happy Birthday Joey  </h2>
 <p>Click on the cake to place candles, then blow into your mic 😘</p>
 
 <div id="cake"></div>
 <p id="counter">Candles: 0</p>
 
-<!-- الرسالة -->
-<p id="message" style="font-size:22px; color:#e91e63; font-weight:bold;"></p>
+<p id="message"></p>
 
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 
@@ -137,14 +148,7 @@ function blowCandles() {{
             origin: {{ y: 0.6 }}
           }});
 
-          // 💖 بوسات متحركة
-          let kisses = ["😘", "💋", "💖", "😘💋", "💋💖💋"];
-          let i = 0;
-
-          setInterval(() => {{
-            msg.innerText = "Have a great year schatje " + kisses[i % kisses.length];
-            i++;
-          }}, 500);
+          msg.innerText = "Have a great year schatje 💖 sending kisses from far away 🌍💋";
         }}
 
       }}, 500);
