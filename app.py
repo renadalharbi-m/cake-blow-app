@@ -131,8 +131,8 @@ body {{
 
 <body>
 
-<h2> Happy Birthday Joey 🎉 </h2>
-<p>Click on the cake then blow 🎤</p>
+<h2> Happy Birthday Joey 😘 </h2>
+<p>Click on the cake then blow </p>
 
 <div id="cake"></div>
 <p id="counter">Candles: 0</p>
