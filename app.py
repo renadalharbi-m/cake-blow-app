@@ -2,7 +2,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 import base64
 
-st.set_page_config(page_title="Cake Blow 🎂", layout="centered")
+st.set_page_config(page_title="HBD JOEY ", layout="centered")
 
 # تحويل الصورة إلى Base64
 with open("cake.png", "rb") as image_file:
@@ -65,39 +65,82 @@ body {{
   margin-top: 10px;
 }}
 
-#message {{
-  font-size: 14px;
-  color: #e91e63;
-  font-weight: normal;
-  margin-top: 5px;
+#footer {{
+  position: fixed;
+  left: 10px;
+  bottom: 5px;
+  font-size: 12px;
+  color: #888888;
 }}
 
-#footer {{
-    position: fixed;
-    left: 10px;
-    bottom: 5px;
-    font-size: 12px;
-    color: #888888;
+/* ✉️ الظرف */
+#envelope {{
+  position: fixed;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  height: 140px;
+  background: #fff;
+  border: 2px solid #e91e63;
+  border-radius: 10px;
+  display: none;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }}
+
+#envelope::before {{
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  background: #e91e63;
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  transform-origin: top;
+  transition: transform 0.6s;
+}}
+
+#envelope.open::before {{
+  transform: rotateX(180deg);
+}}
+
+#letter {{
+  padding: 15px;
+  font-size: 13px;
+  color: #e91e63;
+  opacity: 0;
+  transition: opacity 0.5s 0.5s;
+}}
+
+#envelope.open #letter {{
+  opacity: 1;
+}}
+
 </style>
 </head>
 
 <body>
 
-<h2> Happy Birthday Joey  </h2>
+<h2> Happy Birthday Joey 🎉 </h2>
 <p>Click on the cake to place candles, then blow into your mic 😘</p>
 
 <div id="cake"></div>
 <p id="counter">Candles: 0</p>
 
-<p id="message"></p>
+<!-- الظرف -->
+<div id="envelope">
+  <div id="letter">
+    Have a great year schatje 💋<br>
+    sending kisses from far away 💋💋💋
+  </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 
 <script>
 const cake = document.getElementById("cake");
 const counter = document.getElementById("counter");
-const msg = document.getElementById("message");
 
 let current = 0;
 const maxCandles = 31;
@@ -148,7 +191,13 @@ function blowCandles() {{
             origin: {{ y: 0.6 }}
           }});
 
-          msg.innerText = "Have a great year schatje 💋sending kisses from far away 💋💋💋";
+          // ✉️ إظهار الظرف
+          const envelope = document.getElementById("envelope");
+          envelope.style.display = "block";
+
+          setTimeout(() => {{
+            envelope.classList.add("open");
+          }}, 200);
         }}
 
       }}, 500);
@@ -191,5 +240,5 @@ navigator.mediaDevices.getUserMedia({{ audio: true, video: false }})
 </body>
 </html>
 """,
-height=650,
+height=700,
 )
