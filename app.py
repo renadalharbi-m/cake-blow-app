@@ -142,7 +142,7 @@ body {{
     <div class="envelope-flap"></div>
     <div class="letter">
       Have a great year schatje 💋<br><br>
-      sending kisses from far away
+      sending kisses from far away<br><br>
        💋💋💋
     </div>
   </div>
